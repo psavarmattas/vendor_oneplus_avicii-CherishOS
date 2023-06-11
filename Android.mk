@@ -6,11 +6,4 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),avicii)
 
-$(info Including firmware for OnePlus Nord • avicii...)
-
-FIRMWARE_IMAGES := $(wildcard $(LOCAL_PATH)/firmware/*)
-
-$(foreach f, $(notdir $(FIRMWARE_IMAGES)), \
-    $(call add-radio-file,firmware/$(f)))
-
 endif
